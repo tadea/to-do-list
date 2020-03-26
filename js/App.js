@@ -61,3 +61,12 @@ document.addEventListener("keypress", function(e) {
     input.value = " ";
   }
 });
+
+//complete toDo
+function completeToDo(element) {
+  element.classList.toggle(CHECK);
+  element.classList.toggle(UNCHECK);
+  element.parentNode.querySelector(".text").classList.toggle(LINE_TROUGH);
+
+  LIST = [element.id].done = LIST = [element.id].done ? false : true;
+}
